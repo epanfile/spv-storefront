@@ -4,13 +4,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 import { DialogButtonsDirective } from '../core/components/modal-dialog/dialog-buttons.directive';
 import { DialogComponentOutletComponent } from '../core/components/modal-dialog/dialog-component-outlet.component';
 import { DialogTitleDirective } from '../core/components/modal-dialog/dialog-title.directive';
 import { ModalDialogComponent } from '../core/components/modal-dialog/modal-dialog.component';
 import { NotificationComponent } from '../core/components/notification/notification.component';
-
 import { AddressCardComponent } from './components/address-card/address-card.component';
 import { AddressFormComponent } from './components/address-form/address-form.component';
 import { AddressModalComponent } from './components/address-modal/address-modal.component';
@@ -30,43 +28,35 @@ import { ProductUrlPipe } from './pipes/product-url.pipe';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
 const SHARED_DECLARATIONS = [
-    CartContentsComponent,
-    AddressCardComponent,
-    SignInComponent,
-    AddressFormComponent,
-    CenteredCardComponent,
-    DropdownComponent,
-    DropdownTriggerDirective,
-    DropdownContentDirective,
-    DialogButtonsDirective,
-    DialogTitleDirective,
-    DialogComponentOutletComponent,
-    ModalDialogComponent,
-    AddressModalComponent,
-    CollectionCardComponent,
-    NotificationComponent,
-    FormatPricePipe,
-    ProductUrlPipe,
-    AssetPreviewPipe,
-    SafeHtmlPipe,
-    RadioCardComponent,
-    RadioCardFieldsetComponent,
-    CartTotalsComponent,
+  CartContentsComponent,
+  AddressCardComponent,
+  SignInComponent,
+  AddressFormComponent,
+  CenteredCardComponent,
+  DropdownComponent,
+  DropdownTriggerDirective,
+  DropdownContentDirective,
+  DialogButtonsDirective,
+  DialogTitleDirective,
+  DialogComponentOutletComponent,
+  ModalDialogComponent,
+  AddressModalComponent,
+  CollectionCardComponent,
+  NotificationComponent,
+  FormatPricePipe,
+  ProductUrlPipe,
+  AssetPreviewPipe,
+  SafeHtmlPipe,
+  RadioCardComponent,
+  RadioCardFieldsetComponent,
+  CartTotalsComponent,
 ];
 
-const IMPORTS = [
-    FontAwesomeModule,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    OverlayModule,
-    RouterModule,
-];
+const IMPORTS = [FontAwesomeModule, CommonModule, FormsModule, ReactiveFormsModule, OverlayModule, RouterModule];
 
 @NgModule({
-    declarations: SHARED_DECLARATIONS,
-    imports: IMPORTS,
-    exports: [...IMPORTS, ...SHARED_DECLARATIONS],
+  declarations: SHARED_DECLARATIONS,
+  imports: IMPORTS,
+  exports: [...IMPORTS, ...SHARED_DECLARATIONS],
 })
-export class SharedModule {
-}
+export class SharedModule {}
