@@ -1,200 +1,232 @@
-export interface PossibleTypesResultData {
-  possibleTypes: {
-    [key: string]: string[];
-  };
-}
+// eslint-disable
 
-const result: PossibleTypesResultData = {
-  possibleTypes: {
-    ActiveOrderResult: ['NoActiveOrderError', 'Order'],
-    AddPaymentToOrderResult: [
-      'IneligiblePaymentMethodError',
-      'NoActiveOrderError',
-      'Order',
-      'OrderPaymentStateError',
-      'OrderStateTransitionError',
-      'PaymentDeclinedError',
-      'PaymentFailedError',
+      export interface PossibleTypesResultData {
+        possibleTypes: {
+          [key: string]: string[]
+        }
+      }
+      const result: PossibleTypesResultData = {
+  "possibleTypes": {
+    "ActiveOrderResult": [
+      "NoActiveOrderError",
+      "Order"
     ],
-    ApplyCouponCodeResult: ['CouponCodeExpiredError', 'CouponCodeInvalidError', 'CouponCodeLimitError', 'Order'],
-    AuthenticationResult: ['CurrentUser', 'InvalidCredentialsError', 'NotVerifiedError'],
-    CustomField: [
-      'BooleanCustomFieldConfig',
-      'DateTimeCustomFieldConfig',
-      'FloatCustomFieldConfig',
-      'IntCustomFieldConfig',
-      'LocaleStringCustomFieldConfig',
-      'LocaleTextCustomFieldConfig',
-      'RelationCustomFieldConfig',
-      'StringCustomFieldConfig',
-      'TextCustomFieldConfig',
+    "AddPaymentToOrderResult": [
+      "IneligiblePaymentMethodError",
+      "NoActiveOrderError",
+      "Order",
+      "OrderPaymentStateError",
+      "OrderStateTransitionError",
+      "PaymentDeclinedError",
+      "PaymentFailedError"
     ],
-    CustomFieldConfig: [
-      'BooleanCustomFieldConfig',
-      'DateTimeCustomFieldConfig',
-      'FloatCustomFieldConfig',
-      'IntCustomFieldConfig',
-      'LocaleStringCustomFieldConfig',
-      'LocaleTextCustomFieldConfig',
-      'RelationCustomFieldConfig',
-      'StringCustomFieldConfig',
-      'TextCustomFieldConfig',
+    "ApplyCouponCodeResult": [
+      "CouponCodeExpiredError",
+      "CouponCodeInvalidError",
+      "CouponCodeLimitError",
+      "Order"
     ],
-    ErrorResult: [
-      'AlreadyLoggedInError',
-      'CouponCodeExpiredError',
-      'CouponCodeInvalidError',
-      'CouponCodeLimitError',
-      'EmailAddressConflictError',
-      'GuestCheckoutError',
-      'IdentifierChangeTokenExpiredError',
-      'IdentifierChangeTokenInvalidError',
-      'IneligiblePaymentMethodError',
-      'IneligibleShippingMethodError',
-      'InsufficientStockError',
-      'InvalidCredentialsError',
-      'MissingPasswordError',
-      'NativeAuthStrategyError',
-      'NegativeQuantityError',
-      'NoActiveOrderError',
-      'NotVerifiedError',
-      'OrderLimitError',
-      'OrderModificationError',
-      'OrderPaymentStateError',
-      'OrderStateTransitionError',
-      'PasswordAlreadySetError',
-      'PasswordResetTokenExpiredError',
-      'PasswordResetTokenInvalidError',
-      'PasswordValidationError',
-      'PaymentDeclinedError',
-      'PaymentFailedError',
-      'VerificationTokenExpiredError',
-      'VerificationTokenInvalidError',
+    "AuthenticationResult": [
+      "CurrentUser",
+      "InvalidCredentialsError",
+      "NotVerifiedError"
     ],
-    NativeAuthenticationResult: [
-      'CurrentUser',
-      'InvalidCredentialsError',
-      'NativeAuthStrategyError',
-      'NotVerifiedError',
+    "CustomField": [
+      "BooleanCustomFieldConfig",
+      "DateTimeCustomFieldConfig",
+      "FloatCustomFieldConfig",
+      "IntCustomFieldConfig",
+      "LocaleStringCustomFieldConfig",
+      "LocaleTextCustomFieldConfig",
+      "RelationCustomFieldConfig",
+      "StringCustomFieldConfig",
+      "TextCustomFieldConfig"
     ],
-    Node: [
-      'Address',
-      'Asset',
-      'AuthenticationMethod',
-      'Channel',
-      'Collection',
-      'Country',
-      'Customer',
-      'CustomerGroup',
-      'Facet',
-      'FacetValue',
-      'Fulfillment',
-      'HistoryEntry',
-      'Order',
-      'OrderLine',
-      'Payment',
-      'PaymentMethod',
-      'Product',
-      'ProductOption',
-      'ProductOptionGroup',
-      'ProductVariant',
-      'Promotion',
-      'Province',
-      'Refund',
-      'Role',
-      'Seller',
-      'ShippingMethod',
-      'Surcharge',
-      'Tag',
-      'TaxCategory',
-      'TaxRate',
-      'User',
-      'Zone',
+    "CustomFieldConfig": [
+      "BooleanCustomFieldConfig",
+      "DateTimeCustomFieldConfig",
+      "FloatCustomFieldConfig",
+      "IntCustomFieldConfig",
+      "LocaleStringCustomFieldConfig",
+      "LocaleTextCustomFieldConfig",
+      "RelationCustomFieldConfig",
+      "StringCustomFieldConfig",
+      "TextCustomFieldConfig"
     ],
-    PaginatedList: [
-      'AssetList',
-      'CollectionList',
-      'CountryList',
-      'CustomerList',
-      'FacetList',
-      'HistoryEntryList',
-      'OrderList',
-      'ProductList',
-      'ProductVariantList',
-      'PromotionList',
-      'ProvinceList',
-      'RoleList',
-      'ShippingMethodList',
-      'TagList',
-      'TaxRateList',
+    "ErrorResult": [
+      "AlreadyLoggedInError",
+      "CouponCodeExpiredError",
+      "CouponCodeInvalidError",
+      "CouponCodeLimitError",
+      "EmailAddressConflictError",
+      "GuestCheckoutError",
+      "IdentifierChangeTokenExpiredError",
+      "IdentifierChangeTokenInvalidError",
+      "IneligiblePaymentMethodError",
+      "IneligibleShippingMethodError",
+      "InsufficientStockError",
+      "InvalidCredentialsError",
+      "MissingPasswordError",
+      "NativeAuthStrategyError",
+      "NegativeQuantityError",
+      "NoActiveOrderError",
+      "NotVerifiedError",
+      "OrderLimitError",
+      "OrderModificationError",
+      "OrderPaymentStateError",
+      "OrderStateTransitionError",
+      "PasswordAlreadySetError",
+      "PasswordResetTokenExpiredError",
+      "PasswordResetTokenInvalidError",
+      "PasswordValidationError",
+      "PaymentDeclinedError",
+      "PaymentFailedError",
+      "VerificationTokenExpiredError",
+      "VerificationTokenInvalidError"
     ],
-    RefreshCustomerVerificationResult: ['NativeAuthStrategyError', 'Success'],
-    Region: ['Country', 'Province'],
-    RegisterCustomerAccountResult: [
-      'MissingPasswordError',
-      'NativeAuthStrategyError',
-      'PasswordValidationError',
-      'Success',
+    "NativeAuthenticationResult": [
+      "CurrentUser",
+      "InvalidCredentialsError",
+      "NativeAuthStrategyError",
+      "NotVerifiedError"
     ],
-    RemoveOrderItemsResult: ['Order', 'OrderModificationError'],
-    RequestPasswordResetResult: ['NativeAuthStrategyError', 'Success'],
-    RequestUpdateCustomerEmailAddressResult: [
-      'EmailAddressConflictError',
-      'InvalidCredentialsError',
-      'NativeAuthStrategyError',
-      'Success',
+    "Node": [
+      "Address",
+      "Asset",
+      "AuthenticationMethod",
+      "Channel",
+      "Collection",
+      "Country",
+      "Customer",
+      "CustomerGroup",
+      "Facet",
+      "FacetValue",
+      "Fulfillment",
+      "HistoryEntry",
+      "Order",
+      "OrderLine",
+      "Payment",
+      "PaymentMethod",
+      "Product",
+      "ProductOption",
+      "ProductOptionGroup",
+      "ProductVariant",
+      "Promotion",
+      "Province",
+      "Refund",
+      "Role",
+      "Seller",
+      "ShippingMethod",
+      "Surcharge",
+      "Tag",
+      "TaxCategory",
+      "TaxRate",
+      "User",
+      "Zone"
     ],
-    ResetPasswordResult: [
-      'CurrentUser',
-      'NativeAuthStrategyError',
-      'NotVerifiedError',
-      'PasswordResetTokenExpiredError',
-      'PasswordResetTokenInvalidError',
-      'PasswordValidationError',
+    "PaginatedList": [
+      "AssetList",
+      "CollectionList",
+      "CountryList",
+      "CustomerList",
+      "FacetList",
+      "HistoryEntryList",
+      "OrderList",
+      "ProductList",
+      "ProductVariantList",
+      "PromotionList",
+      "ProvinceList",
+      "RoleList",
+      "ShippingMethodList",
+      "TagList",
+      "TaxRateList"
     ],
-    SearchResultPrice: ['PriceRange', 'SinglePrice'],
-    SetCustomerForOrderResult: [
-      'AlreadyLoggedInError',
-      'EmailAddressConflictError',
-      'GuestCheckoutError',
-      'NoActiveOrderError',
-      'Order',
+    "RefreshCustomerVerificationResult": [
+      "NativeAuthStrategyError",
+      "Success"
     ],
-    SetOrderShippingMethodResult: [
-      'IneligibleShippingMethodError',
-      'NoActiveOrderError',
-      'Order',
-      'OrderModificationError',
+    "Region": [
+      "Country",
+      "Province"
     ],
-    TransitionOrderToStateResult: ['Order', 'OrderStateTransitionError'],
-    UpdateCustomerEmailAddressResult: [
-      'IdentifierChangeTokenExpiredError',
-      'IdentifierChangeTokenInvalidError',
-      'NativeAuthStrategyError',
-      'Success',
+    "RegisterCustomerAccountResult": [
+      "MissingPasswordError",
+      "NativeAuthStrategyError",
+      "PasswordValidationError",
+      "Success"
     ],
-    UpdateCustomerPasswordResult: [
-      'InvalidCredentialsError',
-      'NativeAuthStrategyError',
-      'PasswordValidationError',
-      'Success',
+    "RemoveOrderItemsResult": [
+      "Order",
+      "OrderModificationError"
     ],
-    UpdateOrderItemsResult: [
-      'InsufficientStockError',
-      'NegativeQuantityError',
-      'Order',
-      'OrderLimitError',
-      'OrderModificationError',
+    "RequestPasswordResetResult": [
+      "NativeAuthStrategyError",
+      "Success"
     ],
-    VerifyCustomerAccountResult: [
-      'CurrentUser',
-      'MissingPasswordError',
-      'NativeAuthStrategyError',
-      'PasswordAlreadySetError',
-      'PasswordValidationError',
-      'VerificationTokenExpiredError',
-      'VerificationTokenInvalidError',
+    "RequestUpdateCustomerEmailAddressResult": [
+      "EmailAddressConflictError",
+      "InvalidCredentialsError",
+      "NativeAuthStrategyError",
+      "Success"
     ],
-  },
+    "ResetPasswordResult": [
+      "CurrentUser",
+      "NativeAuthStrategyError",
+      "NotVerifiedError",
+      "PasswordResetTokenExpiredError",
+      "PasswordResetTokenInvalidError",
+      "PasswordValidationError"
+    ],
+    "SearchResultPrice": [
+      "PriceRange",
+      "SinglePrice"
+    ],
+    "SetCustomerForOrderResult": [
+      "AlreadyLoggedInError",
+      "EmailAddressConflictError",
+      "GuestCheckoutError",
+      "NoActiveOrderError",
+      "Order"
+    ],
+    "SetOrderShippingMethodResult": [
+      "IneligibleShippingMethodError",
+      "NoActiveOrderError",
+      "Order",
+      "OrderModificationError"
+    ],
+    "TransitionOrderToStateResult": [
+      "Order",
+      "OrderStateTransitionError"
+    ],
+    "UpdateCustomerEmailAddressResult": [
+      "IdentifierChangeTokenExpiredError",
+      "IdentifierChangeTokenInvalidError",
+      "NativeAuthStrategyError",
+      "Success"
+    ],
+    "UpdateCustomerPasswordResult": [
+      "InvalidCredentialsError",
+      "NativeAuthStrategyError",
+      "PasswordValidationError",
+      "Success"
+    ],
+    "UpdateOrderItemsResult": [
+      "InsufficientStockError",
+      "NegativeQuantityError",
+      "Order",
+      "OrderLimitError",
+      "OrderModificationError"
+    ],
+    "VerifyCustomerAccountResult": [
+      "CurrentUser",
+      "MissingPasswordError",
+      "NativeAuthStrategyError",
+      "PasswordAlreadySetError",
+      "PasswordValidationError",
+      "VerificationTokenExpiredError",
+      "VerificationTokenInvalidError"
+    ]
+  }
 };
-export default result;
+      export default result;
+    
